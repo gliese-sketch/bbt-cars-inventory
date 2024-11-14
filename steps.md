@@ -9,3 +9,4 @@
    to the h1 tag to check if it works
 7. Then we will create a navbar and add a link to github (to get icons we will use bootstrap icons)
 8. We will add a search form
+9. Add cards and change the font using google fonts
