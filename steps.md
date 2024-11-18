@@ -10,3 +10,11 @@
 7. Then we will create a navbar and add a link to github (to get icons we will use bootstrap icons)
 8. We will add a search form
 9. Add cards and change the font using google fonts
+
+# Concepts
+
+- data.json import ESM type="module"
+- we can import style.css directly inside js using Vite
+- forEach vs map vs filter
+- IIFE
+- we iterated over our data to log all the car names
