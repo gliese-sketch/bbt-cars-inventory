@@ -1,3 +1,4 @@
+import shuffle from "shuffle-array";
 import "./style.css";
 import data from "./data.json";
 import Card from "./Card";
@@ -6,10 +7,15 @@ import Card from "./Card";
 const cardsRow = document.querySelector("#cards-row");
 const yearEl = document.querySelector(".year");
 
-data.forEach((car) => {
-  const card = Card(car.price, car.name, car.img);
-  cardsRow.appendChild(card);
+// Performance
+const fragment = document.createDocumentFragment();
+
+shuffle(data).forEach((car) => {
+  const card = Card(car);
+  fragment.appendChild(card);
 });
+
+cardsRow.appendChild(fragment);
 
 // IIFE
 (function () {
