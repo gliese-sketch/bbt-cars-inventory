@@ -4,18 +4,28 @@ import data from "./data.json";
 import Card from "./Card";
 
 // MARK: DOM
-const cardsRow = document.querySelector("#cards-row");
-const yearEl = document.querySelector(".year");
+import { inputEl, cardsRow, yearEl } from "./domSelection";
 
-// Performance
-const fragment = document.createDocumentFragment();
+// Functions
+function showCards(data) {
+  const fragment = document.createDocumentFragment(); // Performance
 
-shuffle(data).forEach((car) => {
-  const card = Card(car);
-  fragment.appendChild(card);
+  data.forEach((car) => {
+    const card = Card(car);
+    fragment.appendChild(card);
+  });
+
+  cardsRow.appendChild(fragment);
+}
+
+// Event Listeners
+inputEl.addEventListener("input", (e) => {
+  console.log(e.target.value);
 });
 
-cardsRow.appendChild(fragment);
+document.addEventListener("DOMContentLoaded", () => {
+  showCards(shuffle(data));
+});
 
 // IIFE
 (function () {

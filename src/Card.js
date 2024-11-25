@@ -1,5 +1,4 @@
 function Card(data) {
-  console.log(data);
   const card = document.createElement("div");
   card.classList.add("col");
   card.innerHTML = `
