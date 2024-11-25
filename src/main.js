@@ -8,6 +8,7 @@ import { inputEl, cardsRow, yearEl } from "./domSelection";
 
 // Functions
 function showCards(data) {
+  cardsRow.innerHTML = ""; // Clear the cardsRow
   const fragment = document.createDocumentFragment(); // Performance
 
   data.forEach((car) => {
@@ -21,6 +22,12 @@ function showCards(data) {
 // Event Listeners
 inputEl.addEventListener("input", (e) => {
   console.log(e.target.value);
+
+  const x = data.filter((car) => {
+    return car.name.toLowerCase().includes(e.target.value.toLowerCase());
+  });
+
+  showCards(x);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
