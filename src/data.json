@@ -1,5 +1,29 @@
 [
   {
+    "id": "6db2912d-9c9c-48e5-a18c-a1346fff690c",
+    "name": "2015 Maserati Ghibli",
+    "price": 55000000,
+    "img": "https://cdn.bigboytoyz.com/new-version/products/product/maserati-ghibli-white-55-of-31.jpg",
+    "url": "https://www.bigboytoyz.com/used-luxury-cars/maserati-ghibli-6-detail-page",
+    "registration": 2016
+  },
+  {
+    "id": "006a6a1b-3359-49cc-94c7-9ca5e5e787c9",
+    "name": "2019 Skoda Octavia VRS 245",
+    "price": 35000000,
+    "img": "https://cdn.bigboytoyz.com/new-version/products/product/bbtskodavrs-00053.jpg",
+    "url": "https://cars.co.in/used-luxury-cars/skoda-octavia-vrs-245-1-detail-page",
+    "registration": 2020
+  },
+  {
+    "id": "58decd65-3594-4926-9361-60619c60c17b",
+    "name": "2021 Audi E Tron 55 Sportback",
+    "price": 65900000,
+    "img": "https://cdn.bigboytoyz.com/new-version/products/product/audi-etron-sportback-grey-mumbai-00619.jpg",
+    "url": "https://www.bigboytoyz.com/used-luxury-cars/audi-e-tron-55-sportback--detail-page",
+    "registration": 2021
+  },
+  {
     "id": "2b7f3edf-8d68-4438-9bd5-70f69db3b368",
     "name": "2023 MERCEDES AMG GLE 53 COUPE 4MATIC PLUS",
     "price": 13900000,

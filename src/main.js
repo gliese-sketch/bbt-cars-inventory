@@ -1,5 +1,6 @@
-import shuffle from "shuffle-array";
 import "./style.css";
+import Fuse from "fuse.js";
+import shuffle from "shuffle-array";
 import data from "./data.json";
 import Card from "./Card";
 
@@ -21,13 +22,23 @@ function showCards(data) {
 
 // Event Listeners
 inputEl.addEventListener("input", (e) => {
-  console.log(e.target.value);
+  const currentValue = e.target.value;
 
-  const x = data.filter((car) => {
-    return car.name.toLowerCase().includes(e.target.value.toLowerCase());
+  if (!currentValue) {
+    showCards(data);
+    return;
+  }
+
+  // Add fuzzy searching
+  const fuse = new Fuse(data, {
+    keys: ["name"],
+    threshold: 0.4,
   });
 
-  showCards(x);
+  const output = fuse.search(currentValue);
+  const filtered = output.map((result) => result.item);
+
+  showCards(filtered);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
